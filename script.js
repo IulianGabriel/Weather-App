@@ -12,7 +12,7 @@ const key = "68a9fcf0d17d45fbabf93418231007"
 document.querySelector(".submit-button").addEventListener("click", submit);
 function submit(e) {
   e.preventDefault();
-  fetchData(`http://api.weatherapi.com/v1/current.json?key=${key}&q=${chooseLocation.value}&aqi=no`)
+  fetchData(`https://api.weatherapi.com/v1/current.json?key=${key}&q=${chooseLocation.value}&aqi=no`)
     .then((res) => showContent(res))
     .catch(() => handleError());
 }
